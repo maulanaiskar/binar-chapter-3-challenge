@@ -15,12 +15,7 @@ class Round {
 
     fun roundThree(){
         for (i in 1..3){
-            println("Ronde ke $i")
-            print("1. Masukkan pemain 1: ")
-            playerOne = readln()
-            print("2. Masukkan pemain 2: ")
-            playerTwo = readln()
-            println(match(playerOne, playerTwo))
+            roundOne()
             points.add(match(playerOne, playerTwo))
         }
 
@@ -33,7 +28,9 @@ class Round {
         if (pointPlayerOne < pointPlayerTwo) {
             println("Pemenangnya adalaahhhhh... Pemain 2")
         }
-
+        if (pointPlayerOne == pointPlayerTwo){
+            println("Pemenangnya adalaahhhhh... DRAW!!!!")
+        }
     }
 
     fun match(playerOne:String, playerTwo: String): String{
