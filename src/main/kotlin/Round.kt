@@ -15,6 +15,7 @@ class Round {
 
     fun roundThree(){
         for (i in 1..3){
+            println("Ronde ke $i")
             roundOne()
             points.add(match(playerOne, playerTwo))
         }
@@ -36,7 +37,6 @@ class Round {
     fun match(playerOne:String, playerTwo: String): String{
         if (playerOne.lowercase() == playerTwo.lowercase()){
             status = "DRAW!"
-            return status
         } else if (playerOne.lowercase() == "batu"){
             status = if (playerTwo.lowercase() == "gunting") {
                 "Pemain 1 MENANG!"
